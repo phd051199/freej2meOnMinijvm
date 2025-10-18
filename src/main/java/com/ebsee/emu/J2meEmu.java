@@ -19,7 +19,7 @@ public class J2meEmu extends GApplication implements XuiAppHolder {
 
     static J2meEmu mainApp;
     EmuForm gform;
-    static String[] midlets = {"pipes-game.jar", "rayman-game.jar"};
+    static String[] midlets = {};
 
     public static J2meEmu getInstance() {
         return mainApp;

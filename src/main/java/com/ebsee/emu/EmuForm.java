@@ -62,19 +62,19 @@ public class EmuForm extends GForm implements GChildrenListener {
         float bottomSpace = (float) inset[2] / GCallBack.getInstance().getDeviceRatio();
         float topSpace = (float) inset[0] / GCallBack.getInstance().getDeviceRatio();
 
-        GButton exitbut = new GButton(getForm(), "", leftSpace, 30, 40f, 25f);
+        GButton exitbut = new GButton(getForm(), "", leftSpace, 60, 40f, 25f);
         form.add(exitbut);
         exitbut.setPreIcon("\uE741");
         exitbut.setActionListener(gObject -> {
             app.closeApp();
         });
-        GButton open = new GButton(getForm(), "", leftSpace, 60, 40f, 25f);
+        GButton open = new GButton(getForm(), "", leftSpace, 90, 40f, 25f);
         form.add(open);
         open.setPreIcon("\uD83D\uDCC1");
         open.setActionListener(gObject -> {
             app.openFileChooser();
         });
-        GButton orientation = new GButton(getForm(), "", getW() - 40 - rightSpace, 30, 40f, 25f);
+        GButton orientation = new GButton(getForm(), "", getW() - 40 - rightSpace, 60, 40f, 25f);
         form.add(orientation);
         orientation.setPreIcon("\uE717");
         orientation.setActionListener(gObject -> {
@@ -85,7 +85,7 @@ public class EmuForm extends GForm implements GChildrenListener {
             }
             Glfm.glfmSetDisplayChrome(GCallBack.getInstance().getDisplay(), Glfm.GLFMUserInterfaceChromeFullscreen);
         });
-        GButton esc = new GButton(getForm(), "", getW() - 40 - rightSpace, 60, 40f, 25f);
+        GButton esc = new GButton(getForm(), "", getW() - 40 - rightSpace, 90, 40f, 25f);
         form.add(esc);
         esc.setPreIcon("☰");
         esc.setStateChangeListener(gObject -> {
@@ -107,7 +107,7 @@ public class EmuForm extends GForm implements GChildrenListener {
         GButton menu = new GButton(getForm(), "", dx, dy, butW, butH);
         form.add(menu);
         menu.setName("SOFT1");
-        menu.setPreIcon("⚏");//
+        menu.setPreIcon("F1");//
         menu.setStateChangeListener(gObject -> {
             dispathKeyEvent(((GButton) gObject).isPressed(), KeyEvent.VK_Q, 'q', KeyEvent.KEY_LOCATION_UNKNOWN);
         });
@@ -115,7 +115,7 @@ public class EmuForm extends GForm implements GChildrenListener {
         GButton back = new GButton(getForm(), "", dx, dy, butW, butH);
         form.add(back);
         menu.setName("SOFT2");
-        back.setPreIcon("⇆");
+        back.setPreIcon("F2");
         back.setStateChangeListener(gObject -> {
             dispathKeyEvent(((GButton) gObject).isPressed(), KeyEvent.VK_W, KeyEvent.CHAR_UNDEFINED, KeyEvent.KEY_LOCATION_UNKNOWN);
         });

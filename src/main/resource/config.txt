@@ -1,4 +1,4 @@
-name=J2ME模拟器
+name=FreeJ2ME
 app=com.ebsee.emu.J2meEmu
 icon=/j2meemu.png
 orientation=v
